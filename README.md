@@ -3,4 +3,5 @@ In this project we covered all the Retail based bussniess related porblems .
 
 OverAll--
 1.We covered all the topics in all the prespectives 
-2.We alsp used the subquery to solve probolem in a appropiate manner
+
+2.We also used the subquery to solve probolem in a appropiate manner
