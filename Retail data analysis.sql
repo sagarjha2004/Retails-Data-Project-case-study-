@@ -1,11 +1,4 @@
 
-create database [Retail data analysis]
-
-use [Retail data analysis]
-select * from transactions
-select * from Customer
-select * from prod_cat_info
-
 --------------------------------------------------------------------------CASESTUDY------------------------------------------------------------------------------
 
 --===========================================================DATA PREPARATION  AND UNDERSTANDING======================================================
@@ -52,7 +45,7 @@ datediff(month,min(tran_date),max(tran_date)) as Numberofmonths,
 datediff(DAY,min(tran_date),max(tran_date)) as Numberofdates
 from Transactions
 
---Q5. Which product category does the sub-category “DIY” belong to? 
+--Q5. Which product category does the sub-category â€œDIYâ€ belong to? 
 
 select prod_cat,prod_subcat
 from prod_cat_info
@@ -130,8 +123,8 @@ select count(*)  as Count_cust from(
 
              ) as X
 
---Q8. What is the combined revenue earned from the “Electronics” & “Clothing” 
---categories, from “Flagship stores”? 
+--Q8. What is the combined revenue earned from the â€œElectronicsâ€ & â€œClothingâ€ 
+--categories, from â€œFlagship storesâ€? 
 
 select Sum(total_amt) as[ Revenue_Electronic Clothing]from Transactions as T
 inner join prod_cat_info as P
@@ -140,7 +133,7 @@ where Store_type = 'Flagship store'
 and 
 prod_cat in ('Electronics','Clothing')
 
---Q9.. What is the total revenue generated from “Male” customers in “Electronics” 
+--Q9.. What is the total revenue generated from â€œMaleâ€ customers in â€œElectronicsâ€ 
 --category? Output should display total revenue by prod sub-cat.
 
 select prod_subcat,Tot_revenue from (
@@ -262,6 +255,7 @@ group by prod_subcat_code
 order by prod_subcat_code
 
     
+
 
 
 
